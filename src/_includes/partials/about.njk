@@ -1,0 +1,29 @@
+ <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+              <h2 class="section__title">{{landing.about.title}}</h2>
+              <span class="section__subtitle">{{landing.about.subtitle}}</span>
+              <div class="about__container container grid">
+                <img src="{{landing.about.image}}" alt="saul corona" class="about__img">
+                <div class="about__data">
+                  <p class="about__description">
+                    {{landing.about.description}}
+                  </p>
+                  <div class="about__info">
+                    {% for summary in  landing.about.summaries %}
+                      <div>
+                        <span class="about__info-title">{{summary.title}}</span>
+                        <span class="about__info-name">{{summary.info}}</span>
+                      </div>
+                    {% endfor %}
+                  </div>
+                  <div class="about__buttons">
+                    <a href="{{landing.socials[0].url}}"
+                      class="button button--flex"
+                      target="_blank"
+                      rel="noreferrer">
+                      Read CV<i class="uil uil-{{landing.socials[0].name}} button__icon"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>

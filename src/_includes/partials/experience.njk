@@ -1,0 +1,61 @@
+<!--==================== QUALIFICATION ====================-->
+<section class="qualification section" id="experience">
+  <h2 class="section__title">Experience</h2>
+  <span class="section__subtitle">My personal journey</span>
+
+  <div class="qualification container">
+    <!-- Botones de pestaña -->
+    <div class="qualification__tabs">
+      {% for tab in landing.experience %}
+        <div class="qualification__button button--flex {% if tab.active %}qualification__active{% endif %}" data-target="#{{ tab.id }}">
+          <i class="uil {{ tab.icon }} qualification__icon"></i>
+          {{ tab.title }}
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- Contenido de cada pestaña -->
+    <div class="qualification__sections">
+      {% for tab in landing.experience %}
+        <div class="qualification__content {% if tab.active %}qualification__active{% endif %}" data-content id="{{ tab.id }}">
+          {% for item in tab.items %}
+            {% if loop.index is odd %}
+              <!-- Estructura para items en posición impar -->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">{{ item.title }}</h3>
+                  <span class="qualification__subtitle">{{ item.subtitle }}</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    {{ item.calendar }}
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+            {% else %}
+              <!-- Estructura para items en posición par -->
+              <div class="qualification__data">
+                <div></div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+                <div>
+                  <h3 class="qualification__title">{{ item.title }}</h3>
+                  <span class="qualification__subtitle">{{ item.subtitle }}</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    {{ item.calendar }}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
