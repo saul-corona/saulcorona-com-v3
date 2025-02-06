@@ -136,19 +136,33 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
-    const scrollY = window.pageYOffset;
+    const scrollY = window.scrollY;
+    console.log("ScrollY:", scrollY);
 
     sections.forEach(current =>{
         const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id');
+        const sectionId = current.getAttribute('id');
+        const navLink = document.querySelector('.nav__menu a[href*="' + sectionId + '"]');
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link');
-        }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link');
+        if (navLink) {
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          navLink.classList.add('active-link');
+        } else {
+          navLink.classList.remove('active-link');
         }
-    })
+      }
+    });
+
+      if ((window.innerHeight + scrollY) >= document.body.offsetHeight) {
+    // Verifica que en la URL se encuentre el hash "#contact"
+    if (window.location.hash === "#contact") {
+      const contactLink = document.querySelector('.nav__menu a[href*="contact"]');
+      if (contactLink) {
+        contactLink.classList.add('active-link');
+      }
+    }
+  }
 }
 window.addEventListener('scroll', scrollActive);
 

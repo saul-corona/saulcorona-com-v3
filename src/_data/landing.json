@@ -74,6 +74,80 @@
     ]
   }
   ],
+  "skills": [
+    {
+      "icon": "uil uil-react",
+      "title": "Frontend",
+      "subtitle": "More than 5 years",
+      "skills": [
+        {
+          "name": "React js",
+          "number": "+ 05 years",
+          "class": "skills__react"
+        },
+        {
+          "name": "JavaScript",
+          "number": "+ 05 years",
+          "class": "skills__javaScript"
+        },
+        {
+          "name": "HTML & CSS",
+          "number": "+ 05 years",
+          "class": "skills__htmlCss"
+        }
+      ]
+    },
+    {
+      "icon": "uil uil-apple",
+      "title": "IOS development",
+      "subtitle": "+ 03 years",
+      "skills": [
+        {
+          "name": "Swift",
+          "number": "+ 03 years",
+          "class": "skills__swift"
+        },
+        {
+          "name": "UIKit",
+          "number": "+ 03 years",
+          "class": "skills__uiKit"
+        },
+        {
+          "name": "SwiftUI",
+          "number": "+ 03 years",
+          "class": "skills__swiftUi"
+        }
+      ]
+    }
+  ],
+  "portfolio": [
+    {
+      "img": "assets/img/cardio-expertos.png",
+      "alt": "Cardio Expertos",
+      "title": "Cardio Expertos",
+      "description": "Site made with wordpress. Designed for blogging.",
+      "url": "https://cardioexpertos.com/"
+    },
+    {
+      "img": "assets/img/Home-Juan-Carlos-Sepulveda-min.png",
+      "alt": "Juan Carlos",
+      "title": "Juan Carlos",
+      "description": "Site made with wordpress. Designed for personal branding.",
+      "url": "https://juancarlosepulveda.com/"
+    },
+    {
+      "img": "assets/img/Inicio-Sosimocontigo-min.png",
+      "alt": "Sosimo Contigo",
+      "title": "Sosimo Contigo",
+      "description": "Site made with wordpress. Designed for bussiness.",
+      "url": "https://sosimocontigo.com/"
+    }
+  ],
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "My inbox is always open",
+    "description": "Whether you have a question or just want to say hi, I'll try my best to get back to you!"
+  },
   "socials": [
       {
         "name": "linkedin",

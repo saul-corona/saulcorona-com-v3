@@ -12,19 +12,30 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 
   <!--==================== CSS ====================-->
-  <link rel="stylesheet" href="/assets/css/styles.css">
-
-  <link rel="icon" href="/img/favicon.png">
+  <link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"/>
+  <link rel="stylesheet" href="/assets/css/styles.css"/>
+  <link rel="icon" href="/assets/img/favicon.ico"/>
 </head>
 <body>
   <main class="main">
     {% include "partials/header.njk" %}
-    <section class="section">
+    <section class="blog-single__section">
       <h1 class="section__title">{{title}}</h1>
-    <section>
-    {{ content | safe }}
+      <p class="blog-single__subtitle">Last update: {{date}}</p>
+    </section>
+    <div class="table-of-contents">
+      <span>Content</span>
+      {{ content | toc | safe }}
+    </div>
+    <section class="blog-single__container">
+      {{ content | safe }}
+    </section>
     {% include "partials/footer.njk" %}
   </main>
+  <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scollup" id="scoll-up">
+      <i class="uil uil-arrow-up scollup__icon"></i>
+    </a>
   <!--==================== SWIPER JS ====================-->
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 

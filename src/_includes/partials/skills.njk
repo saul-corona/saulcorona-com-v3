@@ -1,0 +1,34 @@
+<!--==================== SKILLS ====================-->
+<section class="skills section">
+  <h2 class="section__title">Skills</h2>
+  <span class="section__subtitle">My technical level</span>
+  <div class="skills__container container grid">
+    <div>
+      {% for group in landing.skills %}
+        <div class="skills__content skills__close">
+          <div class="skills__header">
+            <i class="{{ group.icon }} skills__icon"></i>
+            <div>
+              <h2 class="skills__title">{{ group.title }}</h2>
+              <span class="skills__subtitle">{{ group.subtitle }}</span>
+            </div>
+            <i class="uil uil-angle-down skills__arrow"></i>
+          </div>
+          <div class="skills__list grid">
+            {% for skill in group.skills %}
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">{{ skill.name }}</h3>
+                  <span class="skills__number">{{ skill.number }}</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage {{ skill.class }}"></span>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

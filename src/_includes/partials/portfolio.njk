@@ -1,0 +1,31 @@
+<!--==================== PORTFOLIO ====================-->
+<section class="portfolio section" id="portfolio">
+  <h2 class="section__title">Portfolio</h2>
+  <span class="section__subtitle">Most recent work</span>
+
+  <div class="portfolio__container container swiper-container swiper">
+    <div class="swiper-wrapper">
+      {% for project in landing.portfolio %}
+        <div class="portfolio__content grid swiper-slide">
+          <img src="{{ project.img }}" alt="{{ project.alt }}" class="portfolio__img">
+          <div class="portfolio__data">
+            <h3 class="portfolio__title">{{ project.title }}</h3>
+            <p class="portfolio__description">{{ project.description }}</p>
+            <a href="{{ project.url }}" target="_blank" rel="noopener" class="button button--flex button--small portfolio__button">
+              Go!
+              <i class="uil uil-arrow-right button__icon"></i>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <!--Add Arrows-->
+    <div class="swiper-button-next">
+      <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+    </div>
+    <div class="swiper-button-prev">
+      <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
