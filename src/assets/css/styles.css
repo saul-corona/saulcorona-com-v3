@@ -987,6 +987,10 @@ tr:hover {
   row-gap: 3.5rem;
 }
 
+.footer__content {
+  text-align: center;
+}
+
 .footer__bg{
   background-color: var(--first-color-second);
   padding: 2rem 0 3rem;
@@ -1034,6 +1038,9 @@ tr:hover {
   color: #fff;
 }
 
+.footer__socials{
+  margin: 0 auto;
+}
 /*========== SCROLL UP ==========*/
 .scollup{
   position: fixed;

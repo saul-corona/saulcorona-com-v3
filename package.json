@@ -14,7 +14,7 @@
   "author": "saul-corona",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "3.0.0",
+    "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "6.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
     "eleventy-plugin-toc": "1.1.5",
