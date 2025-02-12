@@ -2,26 +2,26 @@
   "hero": {
     "title": "Hello, I'm Saúl",
     "subtitle": "Software Engineer",
-    "description": "High level experience in web development, producing quality work.",
+    "description": "I am a Software Engineer with over 5 years of experience in the tech industry.",
     "cta": "Contact Me",
     "image": "assets/img/saul-corona-hero.png"
   },
   "about": {
     "title": "About Me",
     "subtitle": "My introduction",
-    "description": "Software developer, with knowledge and years of experience, working in web technologies and IOS development, delivering quality work.",
+    "description": "My background includes designing and implementing scalable and efficient solutions, with a focus on JavaScript, React.js, and Node.js, as well as experience in iOS development using Swift and UIKit. 👨‍💻",
     "image":"assets/img/saul_corona_about.JPG",
     "summaries": [
       {
-        "title": "03+",
+        "title": "+05",
         "info": "Years of experience"
       },
       {
-        "title": "20+",
+        "title": "+20",
         "info": "Projects completed"
       },
       {
-        "title": "03+",
+        "title": "+03",
         "info": "Companies worked"
       }
     ]
@@ -52,9 +52,14 @@
     "active": true,
     "items": [
       {
+        "title": "Software Engineer",
+        "subtitle": "Mexico - Mercado Libre",
+        "calendar": "2023 - current"
+      },
+      {
         "title": "Software Development Analyst",
         "subtitle": "Mexico - Mercado Libre",
-        "calendar": "2021 - Present"
+        "calendar": "2021 - 2023"
       },
       {
         "title": "Web Developer",
@@ -98,9 +103,31 @@
       ]
     },
     {
+      "icon": "uil uil-database",
+      "title": "Backend",
+      "subtitle": "More than 5 years",
+      "skills":[
+        {
+          "name": "Node.js",
+          "number": "+ 05 years",
+          "class": "skills__nodeJs"
+        },
+        {
+          "name": "Express",
+          "number": "+ 05 years",
+          "class": "skills__express"
+        },
+        {
+          "name": "MySQL",
+          "number": "+ 05 years",
+          "class": "skills__mongoDB"
+        }
+      ]
+    },
+    {
       "icon": "uil uil-apple",
       "title": "IOS development",
-      "subtitle": "+ 03 years",
+      "subtitle": "Moren than 3 years",
       "skills": [
         {
           "name": "Swift",
