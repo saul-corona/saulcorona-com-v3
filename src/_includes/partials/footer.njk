@@ -1,22 +1,19 @@
 <!--==================== FOOTER ====================-->
-        <footer class="footer">
-          <div class="footer__bg">
-            <div class="footer__container container grid">
-              <div class="footer__content">
-                <h1 class="footer__title">Saúl Corona</h1>
-                <span class="footer__subtitle">Software Engineer</span>
-              </div>
-              <div class="footer__socials">
-                {% for social in  landing.socials %}
-                    <a href="{{social.url}}"
-                      class="footer__social"
-                      target="_blank"
-                      rel="noreferrer">
-                      <i class="uil uil-{{social.name}}"></i>
-                    </a>
-                {% endfor %}
-              </div>
-            </div>
-            <p class="footer__copy">&#169; Saul Corona. All rights reserved</p>
-          </div>
-        </footer>
+<footer class="footer">
+  <div class="footer__bg">
+    <div class="footer__container container grid">
+      <div class="footer__content">
+        <h1 class="footer__title">Saúl Corona</h1>
+        <span class="footer__subtitle">Software Engineer</span>
+      </div>
+      <div class="footer__socials">
+        {% for social in  landing.socials %}
+          <a href="{{ social.url }}" class="footer__social" target="_blank" rel="noreferrer">
+            <i class="uil uil-{{ social.name }}"></i>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+    <p class="footer__copy">&#169; Saul Corona. All rights reserved</p>
+  </div>
+</footer>

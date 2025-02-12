@@ -2,18 +2,19 @@
 <section class="qualification section" id="experience">
   <h2 class="section__title">Experience</h2>
   <span class="section__subtitle">My personal journey</span>
-
-  <div class="qualification container">
+  <div
+    class="qualification container">
     <!-- Botones de pestaña -->
     <div class="qualification__tabs">
       {% for tab in landing.experience %}
-        <div class="qualification__button button--flex {% if tab.active %}qualification__active{% endif %}" data-target="#{{ tab.id }}">
+        <div
+          class="qualification__button button--flex {% if tab.active %}qualification__active{% endif %}"
+          data-target="#{{ tab.id }}">
           <i class="uil {{ tab.icon }} qualification__icon"></i>
           {{ tab.title }}
         </div>
       {% endfor %}
     </div>
-
     <!-- Contenido de cada pestaña -->
     <div class="qualification__sections">
       {% for tab in landing.experience %}
