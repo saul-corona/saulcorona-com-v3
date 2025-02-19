@@ -1,31 +1,32 @@
 ---
 layout: layouts/landing.njk
 title: Saúl Corona | Blog
-description: Saul Corona | Blog
+description: Saúl Corona | Blog
 ---
+
 <section class="blog section">
   <h1 class="section__title">Blog</h1>
   <span class="section__subtitle">A space to share my notes and thoughts</span>
 </section>
 <div class="section">
   <ul class="blog__container container grid">
-  {%- for post in collections.post -%}
-    <li>
-      <div class="blog__content">
-            <h3 class="blog__title">{{ post.data.title }}</h3>
-            <p class="blog__description">{{ post.data.description }}</p>
-            <div class="blog__calendar">
-              <i class="uil uil-calendar-alt"></i>
-              {{ post.data.date }}
-            </div>
-            <a href="{{ post.url }}" class="button__link">
+    {%- for post in collections.post -%}
+      <li>
+        <div class="blog__content">
+          <h3 class="blog__title">{{ post.data.title }}</h3>
+          <p class="blog__description">{{ post.data.description }}</p>
+          <div class="blog__calendar">
+            <i class="uil uil-calendar-alt"></i>
+            {{ post.data.date }}
+          </div>
+          <a href="{{ post.url }}" class="button__link">
             <span class="button button--flex button--small button--link blog__button">
               Read More
-            <i class="uil uil-arrow-right button__icon"></i>
+              <i class="uil uil-arrow-right button__icon"></i>
             </span>
           </a>
-      </div>
-    </li>
-  {%- endfor -%}
+        </div>
+      </li>
+    {%- endfor -%}
   </ul>
 </div>
