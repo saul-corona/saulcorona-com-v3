@@ -1,7 +1,7 @@
 ---
 layout: layouts/single.njk
 title: Setting Up a Mac for Development
-description: If you have developed a static website using Eleventy (11ty) and want to automate its deployment on Hostinger, you can use GitHub Actions to efficiently perform this task without manual intervention.
+description: Here’s a streamlined guide for getting your MacBook ready for development.
 tags: ["post", "software", "web"]
 date: "2025-02-18"
 ---
