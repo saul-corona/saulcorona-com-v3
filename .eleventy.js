@@ -70,6 +70,12 @@ module.exports = async function (eleventyConfig) {
     }
   );
 
+  eleventyConfig.addCollection("post", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/blog/*.md").sort((a, b) => {
+      return b.date - a.date;
+    });
+  });
+
   return {
     // Directorios de entrada, salida, includes y datos
     dir: {
