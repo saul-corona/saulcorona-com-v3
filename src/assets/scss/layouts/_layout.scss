@@ -1,0 +1,50 @@
+.container {
+  max-width: 768px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+
+// Para el blog single
+.blog-single__container {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 1.5rem;
+}
+
+.blog-single__section {
+  padding: 6rem 0 2rem;
+}
+
+.blog-single__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-top: var(--mb-1);
+  margin-bottom: var(--mb-1);
+  text-align: center;
+}
+
+.table-of-contents {
+  padding: var(--mb-1);
+  background-color: var(--quote-color);
+  margin: var(--mb-0-5) var(--mb-1);
+  color: black;
+}
+
+.table-of-contents span {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}

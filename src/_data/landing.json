@@ -4,13 +4,13 @@
     "subtitle": "Software Engineer",
     "description": "I am a Software Engineer with over 5 years of experience in the tech industry.",
     "cta": "Contact Me",
-    "image": "assets/img/saul-corona-hero.png"
+    "image": "assets/img/saul-corona-hero-bg.png"
   },
   "about": {
     "title": "About Me",
     "subtitle": "My introduction",
     "description": "My background includes designing and implementing scalable and efficient solutions, with a focus on JavaScript, React.js, and Node.js, as well as experience in iOS development using Swift and UIKit. 👨‍💻",
-    "image":"assets/img/saul_corona_about.JPG",
+    "image":"assets/img/saul_corona_about.png",
     "summaries": [
       {
         "title": "+05",

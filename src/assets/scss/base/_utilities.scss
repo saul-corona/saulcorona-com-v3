@@ -1,0 +1,45 @@
+// REUSABLE CSS CLASSES
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+// Show/Hide elements
+.show-menu {
+  bottom: 0 !important;
+}
+
+// Active link
+.active-link {
+  color: var(--first-color) !important;
+}
+
+// Change background header
+.scroll__header {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+
+// Active Modal
+.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+// Show scroll
+.show-scroll {
+  bottom: 5rem !important;
+}
