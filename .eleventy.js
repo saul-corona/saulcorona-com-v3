@@ -3,6 +3,9 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const pluginTOC = require("eleventy-plugin-toc");
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+const sass = require("sass");
+const path = require("path");
+const fs = require("fs");
 
 module.exports = async function (eleventyConfig) {
   const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy");
@@ -31,7 +34,36 @@ module.exports = async function (eleventyConfig) {
 
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
-  eleventyConfig.addPassthroughCopy("src/assets");
+  // Process SCSS files
+  eleventyConfig.addTemplateFormats("scss");
+
+  eleventyConfig.addExtension("scss", {
+    outputFileExtension: "css",
+    compile: async function (inputContent, inputPath) {
+      // Skip files that start with an underscore (_) as they are partials
+      let parsed = path.parse(inputPath);
+      if (parsed.name.startsWith("_")) {
+        return;
+      }
+
+      // Main SCSS file
+      if (parsed.base === "main.scss") {
+        let result = sass.compile(inputPath, {
+          style: "compressed",
+          loadPaths: [path.dirname(inputPath)],
+        });
+
+        return async () => {
+          return result.css;
+        };
+      }
+    },
+  });
+
+  // Still pass through other asset files
+  eleventyConfig.addPassthroughCopy("src/assets/fonts");
+  eleventyConfig.addPassthroughCopy("src/assets/img");
+  eleventyConfig.addPassthroughCopy("src/assets/js");
 
   eleventyConfig.addPlugin(pluginTOC, {
     tags: ["h1", "h2", "h3", "h4", "h5", "h6"],

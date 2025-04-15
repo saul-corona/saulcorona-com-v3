@@ -1,0 +1,91 @@
+.skills {
+  &__container {
+    row-gap: 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--mb-2-5);
+    cursor: pointer;
+  }
+
+  &__icon,
+  &__arrow {
+    font-size: 2rem;
+    color: var(--first-color);
+  }
+
+  &__icon {
+    margin-right: var(--mb-0-75);
+  }
+
+  &__title {
+    font-size: var(--h3-font-size);
+  }
+
+  &__subtitle {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+  }
+
+  &__arrow {
+    margin-left: auto;
+    transition: 0.4s;
+  }
+
+  &__list {
+    row-gap: 1.5rem;
+    padding-left: 2.7rem;
+  }
+
+  &__titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--mb-0-5);
+  }
+
+  &__name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+  }
+
+  &__bar,
+  &__percentage {
+    height: 5px;
+    border-radius: 0.25rem;
+  }
+
+  &__bar {
+    background-color: var(--first-color-lighter);
+  }
+
+  &__percentage {
+    display: block;
+    background-color: var(--first-color);
+  }
+
+  /*Example to add exact percentage
+  &__swift{
+    width: 90%;
+  }
+  */
+
+  &__open {
+    .skills__list {
+      height: max-content;
+      margin-bottom: var(--mb-2-5);
+    }
+
+    .skills__arrow {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__close {
+    .skills__list {
+      height: 0;
+      overflow: hidden;
+    }
+  }
+}
