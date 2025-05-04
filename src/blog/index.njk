@@ -8,10 +8,16 @@ description: Saúl Corona | Blog
   <h1 class="section__title">Blog</h1>
   <span class="section__subtitle">A space to share my notes and thoughts</span>
 </section>
+<section class="blog-filters container">
+  <button class="button button--flex button--small filter-button active" data-tag="all">All</button>
+  {% for tag in collections.tagList %}
+    <button class="button button--flex button--small filter-button" data-tag="{{ tag | lower }}">{{ tag }}</button>
+  {% endfor %}
+</section>
 <div class="section">
-  <ul class="blog__container container grid">
+  <ul class="blog__container container grid" id="blog-posts-list">
     {%- for post in collections.post -%}
-      <li>
+      <li class="blog-post-item" data-tags="{{ (post.data.tags | join(',') | lower) if post.data.tags else '' }}">
         <div class="blog__content">
           <h3 class="blog__title">{{ post.data.title }}</h3>
           <p class="blog__description">{{ post.data.description }}</p>

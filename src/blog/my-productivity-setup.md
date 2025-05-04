@@ -2,7 +2,7 @@
 layout: layouts/single.njk
 title: My Productivity Setup
 description: Hey everyone! Today, I want to share my productivity setup on my iPhone. It’s designed to help me stay focused, minimize distractions, and make the most of my time. Here’s how I do it...
-tags: ["post", "software", "web"]
+tags: ["post", "Software"]
 date: "2025-02-23"
 ---
 

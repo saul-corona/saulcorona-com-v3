@@ -2,7 +2,7 @@
 layout: layouts/single.njk
 title: Deploying an Eleventy Site on Hostinger Using GitHub Actions
 description: If you have developed a static website using Eleventy (11ty) and want to automate its deployment on Hostinger, you can use GitHub Actions to efficiently perform this task without manual intervention.
-tags: ["post", "software", "web"]
+tags: ["post", "Software"]
 date: "2025-02-18"
 ---
 

@@ -2,7 +2,7 @@
 layout: layouts/single.njk
 title: Setting Up a Mac for Development
 description: Here’s a streamlined guide for getting your MacBook ready for development.
-tags: ["post", "software", "web"]
+tags: ["post", "Software"]
 date: "2025-02-18"
 ---
 

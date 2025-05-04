@@ -108,15 +108,26 @@ module.exports = async function (eleventyConfig) {
     });
   });
 
+  // Add this collection for unique tags
+  eleventyConfig.addCollection("tagList", function (collectionApi) {
+    let tagSet = new Set();
+    // Ensure you are using the correct collection name if it's not 'post'
+    collectionApi.getFilteredByTag("post").forEach(item => {
+      (item.data.tags || []).forEach(tag => tagSet.add(tag));
+    });
+    // Return a sorted array of tags, excluding 'post'
+    return [...tagSet]
+      .filter(tag => tag !== "post")
+      .sort((a, b) => a.localeCompare(b));
+  });
+
   return {
-    // Directorios de entrada, salida, includes y datos
     dir: {
       input: "src",
       output: "_site",
       includes: "_includes",
       data: "_data",
     },
-    // Configurar el motor de plantillas a Nunjucks (puede ajustarse según se requiera)
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
     dataTemplateEngine: "njk",

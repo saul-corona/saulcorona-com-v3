@@ -186,3 +186,76 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+// Add this code for blog tag filtering
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons = document.querySelectorAll(
+    ".blog-filters .filter-button"
+  );
+  const postItems = document.querySelectorAll(
+    "#blog-posts-list .blog-post-item"
+  );
+  const postsList = document.getElementById("blog-posts-list"); // Get the container
+
+  if (!postsList || filterButtons.length === 0 || postItems.length === 0) {
+    // Don't run if elements aren't found (e.g., not on the blog page)
+    return;
+  }
+
+  // Function to filter posts
+  const filterPosts = tag => {
+    let hasVisibleItems = false;
+    postItems.forEach(item => {
+      const itemTags = item.dataset.tags ? item.dataset.tags.split(",") : [];
+      if (tag === "all" || itemTags.includes(tag)) {
+        item.style.display = ""; // Show item (reset to default display)
+        hasVisibleItems = true;
+      } else {
+        item.style.display = "none"; // Hide item
+      }
+    });
+
+    // (Optional) Visually indicate no results
+    // Example: Add/remove a message
+    let noResultsMessage = postsList.parentNode.querySelector(
+      ".no-results-message"
+    );
+    if (!hasVisibleItems) {
+      if (!noResultsMessage) {
+        postsList.insertAdjacentHTML(
+          "afterend",
+          '<p class="no-results-message section__subtitle">No posts found for this tag.</p>'
+        );
+      }
+    } else {
+      if (noResultsMessage) {
+        noResultsMessage.remove();
+      }
+    }
+  };
+
+  // Add event listeners to buttons
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const selectedTag = button.dataset.tag;
+
+      // Update active button style
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      // Remove existing no results message before filtering
+      let noResultsMessage = postsList.parentNode.querySelector(
+        ".no-results-message"
+      );
+      if (noResultsMessage) {
+        noResultsMessage.remove();
+      }
+
+      // Filter the posts
+      filterPosts(selectedTag);
+    });
+  });
+
+  // Initially, show all posts (optional, could rely on default state)
+  // filterPosts('all'); // Usually not necessary on initial load
+});

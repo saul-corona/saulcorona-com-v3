@@ -2,7 +2,7 @@
 layout: layouts/single.njk
 title: Media stuff
 description: Here, I recommend a mix of must-watch series, movies, and insightful books that explore the intersection of tech and society.
-tags: ["post", "software", "web"]
+tags: ["post", "Media"]
 date: "2025-03-02"
 ---
 

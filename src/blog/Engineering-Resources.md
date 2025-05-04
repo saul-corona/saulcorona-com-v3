@@ -2,7 +2,7 @@
 layout: layouts/single.njk
 title: Engineering Resources
 description: Here are some interesting software engineering resources. Save this page to your bookmarks; I’ll continue updating it.
-tags: ["post", "software", "web"]
+tags: ["post", "Software"]
 date: "2025-03-02"
 ---
 
