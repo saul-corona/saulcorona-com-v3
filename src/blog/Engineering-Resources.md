@@ -6,11 +6,11 @@ tags: ["post", "Software"]
 date: "2025-03-02"
 ---
 
-Here are some interesting software engineering resources.
+**Here are some interesting software engineering resources.
 
-Save this page to your bookmarks; I’ll continue updating it. 😄
+Save this page to your bookmarks; I’ll continue updating it. 😄**
 
-## BLOGS
+## Blogs
 
 | Site                                                                   | Description                                                                                                 |
 | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -27,7 +27,7 @@ Save this page to your bookmarks; I’ll continue updating it. 😄
 
 ---
 
-## LEARNINGS PLATFORMS
+## Learning Platforms
 
 | Site                                                        | Description                                                                           |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------- |

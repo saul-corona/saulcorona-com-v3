@@ -147,7 +147,7 @@ Install NVM with:
 brew install nvm
 ```
 
-Configure NVM by editing the `~/.zshrc` file and adding:
+Configure NVM by editing the ~/.zshrc file and adding:
 
 ```bash
 export NVM_DIR="$HOME/.nvm"
