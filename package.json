@@ -14,13 +14,13 @@
   "author": "saul-corona",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^3.1.2",
-    "@11ty/eleventy-img": "6.0.1",
-    "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
+    "@11ty/eleventy": "^3.1.5",
+    "@11ty/eleventy-img": "6.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "5.0.2",
     "eleventy-plugin-toc": "1.1.5",
     "markdown-it-anchor": "9.2.0"
   },
   "devDependencies": {
-    "sass": "1.86.3"
+    "sass": "1.98.0"
   }
 }
